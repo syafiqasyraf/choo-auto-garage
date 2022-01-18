@@ -7,7 +7,7 @@ Still in progress.
 Features:
 1. Static web pages for client.
 2. Dashboard for workshop owner.
-3. Inventory store data.
+3. Store inventory data.
 4. Clients details.
 5. Order details.
 6. Cash flow and profits.
