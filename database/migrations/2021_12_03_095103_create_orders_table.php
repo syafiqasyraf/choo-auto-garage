@@ -15,10 +15,21 @@ class CreateOrdersTable extends Migration
     {
         Schema::create('orders', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('pelanggan_id')->constrained();
-            $table->string('order_name')->unique();
-            $table->string('order_details')->unique();
+            $table->string('order')->unique();
+            $table->string('kereta');
+            $table->string('platkereta');
+            $table->string('complain');
+            $table->string('masalah')->nullable();
+            $table->string('tindakan')->nullable();
+            $table->string('catatan')->nullable();
+            $table->boolean('status');
+            $table->dateTime('tarikhsiap')->nullable();
             $table->timestamps();
+        });
+        Schema::table('orders', function (Blueprint $table) {
+            $table->unsignedBigInteger('pelanggan_id');
+        
+            $table->foreign('pelanggan_id')->references('id')->on('pelanggans')->cascadeOnDelete();
         });
         
     }

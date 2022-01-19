@@ -15,10 +15,11 @@ class OrderController extends Controller
      */
     public function index()
     {
-        // return view('dashboard.order.index',[
-        //     'order' => Order::all(),
-        //     'pelanggan' => Pelanggan::all()
-        // ]);
+        $order = Order::latest()->paginate(2);
+        return view('dashboard.order.index',[
+            'orders' => $order,
+            'pelanggan' => Pelanggan::all()
+        ]);
     }
 
     /**
@@ -26,9 +27,11 @@ class OrderController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function create()
+    public function create(Order $order)
     {
-        //
+        return view('dashboard.order.create',[
+            'orders'=> $order
+        ]);
     }
 
     /**

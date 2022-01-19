@@ -17,9 +17,9 @@
               <thead>
                 <tr>
                   <th>No</th>
-                  <th>Nama</th>
+                  <th>Nama Customer</th>
                   <th>No Telefon</th>
-                  <th>Order</th>
+                  <th>Alamat</th>
                   <th>Catatan</th>
                 </tr>
               </thead>
@@ -29,7 +29,7 @@
                   <td>{{ $loop -> iteration}}</td>
                   <td>{{ $pelanggan -> name}}</td>
                   <td>{{ $pelanggan -> notel}}</td>
-                  <td>{{ $pelanggan -> order}}</td>
+                  <td>{{ $pelanggan -> address}}</td>
                   <td>
                       <a href="/dashboard/pelanggan/{{ $pelanggan->id }}" class="badge bg-info text-dark">
                         <span data-feather="eye"></span> ORDER</a>

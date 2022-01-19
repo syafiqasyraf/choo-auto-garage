@@ -16,7 +16,6 @@ class PelangganFactory extends Factory
         return [
             'name'=> $this->faker->name(),
             'notel'=> $this->faker->mobileNumber($countryCodePrefix=null),
-            'order'=> $this->faker->jpjNumberPlate(),
             'address'=> $this->faker->townState(),
         ];
     }

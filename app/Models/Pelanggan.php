@@ -2,8 +2,9 @@
 
 namespace App\Models;
 
-use Illuminate\Database\Eloquent\Factories\HasFactory;
+use App\Models\Order;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Factories\HasFactory;
 
 class Pelanggan extends Model
 {
@@ -13,5 +14,10 @@ class Pelanggan extends Model
     // protected $fillable = ['nama','notel'];
     
     protected $guarded = ['id'];
+
+    public function order()
+    {
+        return $this->hasMany(Order::class);
+    }
    
 }

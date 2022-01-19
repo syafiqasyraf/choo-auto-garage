@@ -18,9 +18,6 @@ class CreatePelanggansTable extends Migration
             $table->string('name');
             $table->text('notel');
             $table->text('address');
-            $table->text('order');
-            $table->string('image')->nullable();
-            $table->timestamp('published_at')->nullable();
             $table->timestamps();
             
         });

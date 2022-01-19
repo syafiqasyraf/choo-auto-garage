@@ -16,7 +16,7 @@ class StokController extends Controller
      */
     public function index()
     {
-        $stok = Stok::paginate(10)->withPath('/dashboard/stok');
+        $stok = Stok::latest()->filter(request(['search']))->paginate(2);
         return view('dashboard.stok.index',[
             'stok' => $stok,
             'pelanggan' => Pelanggan::all()

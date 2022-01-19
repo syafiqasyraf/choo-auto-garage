@@ -9,7 +9,7 @@
               </li>
               <li class="nav-item">
                 <a class="nav-link {{ Request::is('dashboard/stok*') ? 'active' :'' }}" href="/dashboard/stok">
-                  <span data-feather="file-text"></span>
+                  <span data-feather="package"></span>
                   Stok
                 </a>
               </li>
@@ -31,6 +31,18 @@
                 <a class="nav-link {{ Request::is('dashboard/pelanggan*') ? 'active' :'' }}" href="/dashboard/pelanggan">
                   <span data-feather="users"></span>
                   Pelanggan
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link {{ Request::is('dashboard/order*') ? 'active' :'' }}" href="/dashboard/order">
+                  <span data-feather="tool"></span>
+                  Order
+                </a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link {{ Request::is('dashboard/cashflow*') ? 'active' :'' }}" href="/dashboard/cashflow">
+                  <span data-feather="dollar-sign"></span>
+                  Cashflow
                 </a>
               </li>
                 <li class="nav-item">
