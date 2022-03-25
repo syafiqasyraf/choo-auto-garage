@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Order;
 use App\Models\Pelanggan;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Storage;
@@ -16,7 +17,8 @@ class DashboardPelangganController extends Controller
     public function index()
     {
         return view('dashboard.pelanggan.index',[
-            'pelanggan' => Pelanggan::all()
+            'pelanggan' => Pelanggan::all(),
+            'orders' => Order::all()
         ]);
     }
 

@@ -11,7 +11,7 @@
       </div>
     @endif
 
-    <div class="table-responsive col-lg-10">
+    <div class="table-responsive col-lg-12">
         <a href="/dashboard/pelanggan/create" class="btn btn-primary mb-3">Tambah Pelanggan</a>
             <table class="table table-striped table-sm">
               <thead>
@@ -20,6 +20,7 @@
                   <th>Nama Customer</th>
                   <th>No Telefon</th>
                   <th>Alamat</th>
+                  <th>Order</th>
                   <th>Catatan</th>
                 </tr>
               </thead>
@@ -30,6 +31,9 @@
                   <td>{{ $pelanggan -> name}}</td>
                   <td>{{ $pelanggan -> notel}}</td>
                   <td>{{ $pelanggan -> address}}</td>
+                  <td></td>
+                  <!-- <td>
+                  {{ $pelanggan->orders}}</td> -->
                   <td>
                       <a href="/dashboard/pelanggan/{{ $pelanggan->id }}" class="badge bg-info text-dark">
                         <span data-feather="eye"></span> ORDER</a>

@@ -2,6 +2,7 @@
 
 use App\Models\Pelanggan;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\CashController;
 use App\Http\Controllers\ShowController;
 use App\Http\Controllers\StokController;
 use App\Http\Controllers\UserController;
@@ -57,5 +58,6 @@ Route::get('/dashboard', function(){
 Route::resource('/dashboard/pelanggan', DashboardPelangganController::class)->middleware('auth');
 Route::resource('/dashboard/order', OrderController::class)->middleware('auth');
 Route::resource('/dashboard/stok', StokController::class)->middleware('auth');
+Route::resource('/dashboard/cash', CashController::class)->middleware('auth');
 
 Route::resource('/dashboard/users', AdminController::class)->except('show')->middleware('admin');

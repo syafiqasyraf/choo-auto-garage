@@ -8,5 +8,4 @@
             <button type="submit" class="btn btn-primary">Kembali ke HomePage</button>
         </form>
     </div>
-    
 @endsection

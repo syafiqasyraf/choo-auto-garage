@@ -40,7 +40,7 @@
                 </a>
               </li>
               <li class="nav-item">
-                <a class="nav-link {{ Request::is('dashboard/cashflow*') ? 'active' :'' }}" href="/dashboard/cashflow">
+                <a class="nav-link {{ Request::is('dashboard/cash*') ? 'active' :'' }}" href="/dashboard/cash">
                   <span data-feather="dollar-sign"></span>
                   Cashflow
                 </a>

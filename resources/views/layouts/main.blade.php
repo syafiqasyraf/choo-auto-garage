@@ -13,6 +13,7 @@
     
     <!-- My Styles-->
     <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="/css/products.css">
     
     <title>Choo Garage | {{ $title }} </title>
   </head>

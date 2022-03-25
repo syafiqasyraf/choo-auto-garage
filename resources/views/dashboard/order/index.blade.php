@@ -34,12 +34,13 @@
                   <th>Nama Order</th>
                   <th>Kereta</th>
                   <th>No Plat</th>
-                  <th>Complain</th>
+                  <th>Nama Pelanggan</th>
+                  <!-- <th>Complain</th>
                   <th>Masalah</th>
-                  <th>Tindakan</th>
+                  <th>Tindakan</th> -->
                   <th>Status</th>
-                  <th>Tarikh Hantar</th>
-                  <th>Tarikh Siap</th>
+                  <!-- <th>Tarikh Hantar</th>
+                  <th>Tarikh Siap</th> -->
                   <th>Catatan</th>
                 </tr>
               </thead>
@@ -50,17 +51,18 @@
                   <td>{{ ucwords($order -> order) }}</td>
                   <td>{{ $order -> kereta}}</td>
                   <td>{{ $order -> platkereta}}</td>
-                  <td>{{ $order -> complain}}</td>
+                  <td>{{ $order -> pelanggan->name}}</td>
+                  <!-- <td>{{ $order -> complain}}</td>
                   <td>{{ $order -> masalah}}</td>
-                  <td>{{ $order -> tindakan}}</td>
+                  <td>{{ $order -> tindakan}}</td> -->
                   <td>
                     @if ($order->status == 0)
                       <p class="text-danger">Tengah bikin</p>
                     @else
                     <p class="text-success">Siap dah!!</p>
                     @endif</td>
-                  <td>{{ $order -> created_at}}</td>
-                  <td>{{ $order -> tarikhsiap}}</td>
+                  <!-- <td>{{ $order -> created_at}}</td>
+                  <td>{{ $order -> tarikhsiap}}</td> -->
                   <td>{{ $order -> catatan}}</td>
                 
                 </tr>
